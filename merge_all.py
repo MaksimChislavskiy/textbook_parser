@@ -14,7 +14,6 @@ OUTPUT_FILE = os.path.join(INPUT_FOLDER, '5_6_class_shevkin_merged.xlsx')
 
 
 def merge_all():
-    # print("Загрузка данных...")
     tasks_df = pd.read_excel(TASKS_FILE, sheet_name='tasks')
     answers_df = pd.read_excel(ANSWERS_FILE, sheet_name='answers')
     toc_df = pd.read_excel(TOC_FILE, sheet_name='table_of_contents')

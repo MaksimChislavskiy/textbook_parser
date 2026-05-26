@@ -70,26 +70,22 @@ def parse_answers_final(text):
             answer = sub_match.group(2).strip()
             answer = clean_answer(answer)
             if answer:
-                sub_matches.append((sub_letter, answer))
-        
+                sub_matches.append((sub_letter, answer))        
         if not sub_matches:
             for sub_match in re.finditer(number_pattern, task_content):
                 sub_num = sub_match.group(1)
                 answer = sub_match.group(2).strip()
                 answer = clean_answer(answer)
                 if answer:
-                    sub_matches.append((sub_num, answer))
-        
+                    sub_matches.append((sub_num, answer))        
         if sub_matches:
             for sub, answer in sub_matches:
                 results.append((f"{task_num}.{sub})", answer))
         else:
             clean_content = clean_answer(task_content)
             if clean_content:
-                results.append((f"{task_num})", clean_content))
-        
-        pos = task_end
-    
+                results.append((f"{task_num})", clean_content))        
+        pos = task_end    
     return results
 
 
