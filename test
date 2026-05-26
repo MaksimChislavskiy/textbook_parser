@@ -1,8 +1,0 @@
-import os
-import re
-import openpyxl
-from docx import Document
-
-INPUT_FOLDER = 'input_data'
-OUTPUT_FOLDER = 'output'
-TARGET_FILE = 'tekstovye_zadachi_po_matematike.docx'
